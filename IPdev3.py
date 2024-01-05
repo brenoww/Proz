@@ -7,6 +7,6 @@
 
 numAndares = 20;
 
-for i in range(20, 1, -1):
+for i in range(20, 0, -1):
     if(i != 13):
         print(i)
