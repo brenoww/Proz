@@ -12,48 +12,51 @@
 
 # É necessário que o sistema mostre as opções sempre que finalizar uma operação e mostrar o resultado.
 
-print("CALCULADORA \n");
+def calculadora():
+    print("CALCULADORA \n");
 
-operacao = input("Escolha uma das operações abaixo para calcular:\n\n1: Soma\n2: Subtração\n3: Multiplicação\n4: Divisão\n\nCaso deseje sair:\n\n0: SAIR\n");
+    operacao = input("Escolha uma das operações abaixo para calcular:\n\n1: Soma\n2: Subtração\n3: Multiplicação\n4: Divisão\n\nCaso deseje sair:\n\n0: SAIR\n");
 
-while(operacao != 0):
-    
-    operacao = str(operacao)
-    if(operacao.isdigit()): operacao = int(operacao)
+    while(operacao != 0):
+        
+        operacao = str(operacao)
+        if(operacao.isdigit()): operacao = int(operacao)
 
-    if operacao in [0,1,2,3,4]:
+        if operacao in [0,1,2,3,4]:
 
-        if(operacao == 0):
-            print("Saindo...") 
-            continue;
+            if(operacao == 0):
+                print("Saindo...") 
+                continue;
 
-        num1 = input("Informe o primeiro número\n")
-        num2 = input("Informe o segundo número\n")
+            num1 = input("Informe o primeiro número\n")
+            num2 = input("Informe o segundo número\n")
 
-        if(num1.replace(".","").isnumeric() and num2.replace(".","").isnumeric()):
-            num1 = float(num1)
-            num2 = float(num2)
-        else:
-            print("Insira números válidos.");
-            continue;
+            if(num1.replace(".","").isnumeric() and num2.replace(".","").isnumeric()):
+                num1 = float(num1)
+                num2 = float(num2)
+            else:
+                print("Insira números válidos.");
+                continue;
 
-        if(operacao == 1):
-            res = num1 + num2;
-            print("1: Soma")
-        elif(operacao == 2):
-            res = num1 - num2;
-            print("2: Subtração")
-        elif(operacao == 3):
-            res = num1 * num2;
-            print("3: Multiplicação")
-        elif(operacao == 4):
-            res = num1 / num2
-            print("4: Divisão")
-                
-        print("\nResultado: %.2f\n\n" % res)        
-    else: 
-        print("Essa opção não existe.");
-    
-    input("Pressione 'Enter' para continuar...\n")
+            if(operacao == 1):
+                res = num1 + num2;
+                print("1: Soma")
+            elif(operacao == 2):
+                res = num1 - num2;
+                print("2: Subtração")
+            elif(operacao == 3):
+                res = num1 * num2;
+                print("3: Multiplicação")
+            elif(operacao == 4):
+                res = num1 / num2
+                print("4: Divisão")
+                    
+            print("\nResultado: %.2f\n\n" % res)        
+        else: 
+            print("Essa opção não existe.");
+        
+        input("Pressione 'Enter' para continuar...\n")
 
-    operacao = input("Qual operação deseja executar?\n\n1: Soma\n2: Subtração\n3: Multiplicação\n4: Divisão\n\nCaso deseje sair:\n\n0: SAIR\n")
+        operacao = input("Qual operação deseja executar?\n\n1: Soma\n2: Subtração\n3: Multiplicação\n4: Divisão\n\nCaso deseje sair:\n\n0: SAIR\n")
+
+calculadora();
